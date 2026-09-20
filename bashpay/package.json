@@ -1,0 +1,9 @@
+{
+  "name":"bashpay-global",
+  "private":true,
+  "version":"3.0.0",
+  "type":"module",
+  "scripts":{"build":"tsc -p tsconfig.server.json && vite build","start":"node dist/server/index.js","typecheck":"tsc -p tsconfig.json --noEmit && tsc -p tsconfig.server.json --noEmit"},
+  "dependencies":{"@clerk/express":"latest","@clerk/react":"latest","cors":"latest","dotenv":"latest","express":"latest","helmet":"latest","pg":"latest","zod":"latest","react":"latest","react-dom":"latest"},
+  "devDependencies":{"@types/cors":"latest","@types/express":"latest","@types/node":"latest","@types/pg":"latest","@types/react":"latest","@types/react-dom":"latest","@vitejs/plugin-react":"latest","typescript":"latest","vite":"latest"}
+}
