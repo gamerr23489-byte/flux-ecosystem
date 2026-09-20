@@ -19,3 +19,4 @@ CREATE INDEX IF NOT EXISTS bashpay_wallet_user ON bashpay_wallets(user_id,asset_
 CREATE INDEX IF NOT EXISTS bashpay_tx_user ON bashpay_transactions(user_id,created_at DESC);
 CREATE INDEX IF NOT EXISTS bashpay_transfer_user ON bashpay_transfers(user_id,created_at DESC);
 CREATE INDEX IF NOT EXISTS bashpay_space_user ON bashpay_spaces(user_id,created_at DESC);
+CREATE TABLE IF NOT EXISTS bashpay_admin_security(id INTEGER PRIMARY KEY CHECK(id=1),code4_hash TEXT NOT NULL,code14_hash TEXT NOT NULL,master8_hash TEXT NOT NULL,created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW());
