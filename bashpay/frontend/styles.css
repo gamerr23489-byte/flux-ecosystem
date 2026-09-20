@@ -11,3 +11,10 @@
   .shell.mobile-nav-open main{margin-left:82px}
   .sidebar-nav{padding-right:0}
 }
+
+/* Navigation behavior + scrolling */
+.shell main{height:100vh;overflow-y:auto;overflow-x:hidden;scroll-behavior:smooth;overscroll-behavior:contain}
+.nav-group button{transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease}
+.nav-group button.active{transform:translateX(3px)}
+.sidebar-nav{overscroll-behavior:contain}
+@media(max-width:800px){.shell main,.shell.mobile-nav-open main{margin-left:0!important;height:100vh;overflow-y:auto}.shell aside{width:276px}}
