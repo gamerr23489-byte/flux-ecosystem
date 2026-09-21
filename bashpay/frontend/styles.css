@@ -182,3 +182,26 @@
   .shell header{padding:0 12px}
   section{padding-left:12px!important;padding-right:12px!important}
 }
+
+/* Final phone-width guardrails */
+@media (max-width: 800px){
+  *,*::before,*::after{box-sizing:border-box}
+  .shell, .shell main, section, .hero, .form, .feature, .list, .settings, .stats, .grid{max-width:100%;min-width:0}
+  .hero h1,.hero p,.title h3,.card small,.row b,.row span,.admin-head p{overflow-wrap:anywhere}
+  button, input, select{max-width:100%}
+  .actions{min-width:0}
+  .actions button{min-width:0}
+  .head-actions{min-width:42px}
+  .head-actions .cl-userButtonBox{max-width:42px}
+  .admin-head>div{min-width:0}
+}
+@media (max-width: 360px){
+  .shell header{height:68px;min-height:68px}
+  .mobile{width:40px;height:40px;flex-basis:40px}
+  .shell header h2{font-size:19px}
+  .hero h1{font-size:34px!important}
+  .hero{padding:20px 16px!important}
+  .stats{grid-template-columns:1fr!important}
+  .card{padding:14px!important}
+  .nav-group button{min-height:42px}
+}
