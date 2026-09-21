@@ -214,3 +214,6 @@
 .send-form{max-width:none}
 .send-note{padding:13px 14px;border-radius:11px;background:rgba(97,235,255,.05);border:1px solid rgba(97,235,255,.10);color:#8e9bb0;font-size:12px;line-height:1.55}
 @media(max-width:800px){.send-shell{width:100%}.send-switch button{min-height:44px}.send-form{width:100%!important}}
+
+.verify-recipient{width:100%}
+.send-verified{padding:11px 13px;border-radius:11px;background:rgba(97,235,255,.06);border:1px solid rgba(97,235,255,.16);color:#bfeeff;font-size:12px}
