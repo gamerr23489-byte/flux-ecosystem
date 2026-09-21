@@ -23,3 +23,6 @@ CREATE TABLE IF NOT EXISTS bashpay_admin_security(id INTEGER PRIMARY KEY CHECK(i
 
 CREATE TABLE IF NOT EXISTS bashpay_webhook_events(id BIGSERIAL PRIMARY KEY,provider TEXT NOT NULL,event_id TEXT UNIQUE,event_type TEXT,payload JSONB NOT NULL DEFAULT '{}'::jsonb,status TEXT NOT NULL DEFAULT 'RECEIVED',error TEXT,received_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),processed_at TIMESTAMPTZ);
 CREATE INDEX IF NOT EXISTS bashpay_webhook_event_status ON bashpay_webhook_events(status,received_at DESC);
+
+CREATE TABLE IF NOT EXISTS bashpay_card_requests(id BIGSERIAL PRIMARY KEY,user_id BIGINT NOT NULL REFERENCES bashpay_users(id) ON DELETE CASCADE,card_type TEXT NOT NULL DEFAULT 'VIRTUAL',currency TEXT NOT NULL DEFAULT 'USD',status TEXT NOT NULL DEFAULT 'PENDING',provider TEXT,provider_ref TEXT,created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW());
+CREATE INDEX IF NOT EXISTS bashpay_card_request_user ON bashpay_card_requests(user_id,created_at DESC);
