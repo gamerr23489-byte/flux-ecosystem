@@ -205,3 +205,12 @@
   .card{padding:14px!important}
   .nav-group button{min-height:42px}
 }
+
+/* BashPay send workspace */
+.send-shell{max-width:720px}
+.send-switch{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:5px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);border-radius:13px;background:rgba(255,255,255,.025)}
+.send-switch button{border:0;border-radius:9px;padding:10px;background:transparent;color:#778399}
+.send-switch button.active{background:rgba(255,255,255,.08);color:#fff}
+.send-form{max-width:none}
+.send-note{padding:13px 14px;border-radius:11px;background:rgba(97,235,255,.05);border:1px solid rgba(97,235,255,.10);color:#8e9bb0;font-size:12px;line-height:1.55}
+@media(max-width:800px){.send-shell{width:100%}.send-switch button{min-height:44px}.send-form{width:100%!important}}
